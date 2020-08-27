@@ -29,11 +29,22 @@ $("#search").keyup(function () {
 
 //Alterna o estado de ativo das li de contatos
 $(".contacts li").click(function () {
+    var id = $(this).attr("id");
+
+
     if (!$(this).hasClass("active")) {
         $.each($("ul.contacts li.active"), function () {
             $(this).removeClass("active");
         });
 
         $(this).addClass("active");
+        $(".chat-box").css("display", "none");
+        $("div." + id).css("display", "block");
+        $("div." + id + " .msg_card_body").scrollTop($("div." + id + " .msg_card_body").innerHeight());
     }
+    else {
+        $(this).removeClass("active");
+        $(".chat-box").css("display", "none");
+    }
+
 });
