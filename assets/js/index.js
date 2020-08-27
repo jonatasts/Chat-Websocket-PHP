@@ -1,14 +1,13 @@
-$(document).ready(function () {
-    $('#action_menu_btn').click(function () {
-        $('.action_menu').toggle();
-    });
+//Botão de opção na conversa
+$('.action_menu_btn').click(function () {
+    $('.action_menu').toggle();
 });
 
-//TABLE ->Write on keyup event of keyword input element
+//Faz a busca das letras digitas no input de busca
 $("#search").keyup(function () {
     if ($("#search").val() != "") {
         _this = this;
-        // Show only matching TR, hide rest of them
+        // mostra somente a li que conter caracteres ou for igual a string digitada
         $.each($("ul.contacts li"), function () {
             if ($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
                 $(this).hide();
@@ -28,6 +27,7 @@ $("#search").keyup(function () {
     }
 });
 
+//Alterna o estado de ativo das li de contatos
 $(".contacts li").click(function () {
     if (!$(this).hasClass("active")) {
         $.each($("ul.contacts li.active"), function () {
