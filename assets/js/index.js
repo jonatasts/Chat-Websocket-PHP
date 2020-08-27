@@ -41,6 +41,7 @@ $(".contacts li").click(function () {
         $(".chat-box").css("display", "none");
         $("div." + id).css("display", "block");
         $("div." + id + " .msg_card_body").scrollTop($("div." + id + " .msg_card_body").innerHeight());
+        $('.action_menu').hide();
     }
     else {
         $(this).removeClass("active");
