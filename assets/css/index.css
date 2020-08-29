@@ -87,6 +87,7 @@ body, html {
     color: white !important;
     height: 60px !important;
     overflow-y: auto;
+    
 }
 
 .type_msg:focus {
@@ -99,7 +100,7 @@ body, html {
     background-color: rgba(0, 0, 0, 0.3) !important;
     border: 0 !important;
     color: white !important;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 .send_btn {
@@ -200,7 +201,7 @@ body, html {
     margin-right: 20px;
 }
 
-.msg_cotainer {
+.msg_container {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 10px;
@@ -210,7 +211,7 @@ body, html {
     position: relative;
 }
 
-.msg_cotainer_send {
+.msg_container_send {
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 10px;
